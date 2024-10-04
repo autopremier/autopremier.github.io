@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte Auto Premier</title>
+    <!-- Importar o CSS -->
+    <link rel="stylesheet" href="public/style.css"> <!-- Caminho ajustado para a pasta public -->
+</head>
+<body>
+    <div class="container">
+        <h1>Suporte Auto Premier</h1>
+        <form action="https://formspree.io/f/xjkbnpvp" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <!-- Campo _replyto para garantir que o Formspree trate corretamente o destinatário principal -->
+            <input type="email" id="email" name="email" required> 
+
+            <label for="issue">Descrição do Problema:</label>
+            <textarea id="issue" name="issue" required></textarea>
+
+            <!-- Campo de seleção para a urgência -->
+            <label for="urgency">Como você classifica a urgência do seu chamado?</label>
+            <select id="urgency" name="urgency" required>
+                <option value="Baixa Prioridade">Baixa Prioridade</option>
+                <option value="Media Prioridade">Média Prioridade</option>
+                <option value="Urgente">Urgente</option>
+                <option value="Muito Urgente">Muito Urgente</option>
+            </select>
+
+            <input type="hidden" name="_subject" value="Novo ticket de Suporte"> <!-- Assunto fixo do email -->
+            <!-- Emails em cópia -->
+            <input type="hidden" name="_cc" value="compras@autopremier.com.br">
+
+            <button type="submit" class="ticket-button">Enviar Ticket</button>
+        </form>
+        <div id="responseMessage" class="hidden">Seu ticket foi enviado com sucesso!</div>
+    </div>
+</body>
+</html>
