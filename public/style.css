@@ -48,19 +48,6 @@ input:focus, textarea:focus, select:focus {
     border-color: rgba(255, 255, 255, 0.5); /* Muda a cor da borda ao focar */
 }
 
-/* Estilos para o select e suas opções */
-select {
-    appearance: none; /* Remove o estilo padrão do navegador */
-    background: rgba(255, 255, 255, 0.2); /* Fundo transparente */
-    color: white; /* Cor do texto */
-    font-size: 15px;
-}
-
-select option {
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo das opções */
-    color: white; /* Cor do texto das opções */
-}
-
 .ticket-button {
     width: 100%;
     padding: 12px;
@@ -99,4 +86,10 @@ select option {
     text-align: center;
     color: white;
     margin-top: 10px;
+}
+
+/* Tornar a terceira caixa (Descrição do Problema) não editável */
+textarea#issue {
+    background-color: rgba(255, 255, 255, 0.3);
+    pointer-events: none; /* Desabilita a edição */
 }
