@@ -91,5 +91,5 @@ input:focus, textarea:focus, select:focus {
 /* Tornar a terceira caixa (Descrição do Problema) não editável */
 textarea#issue {
     background-color: rgba(255, 255, 255, 0.3);
-    pointer-events: none; /* Desabilita a edição */
+    pointer-events: auto; /* Desabilita a edição */
 }
