@@ -40,7 +40,7 @@ let transporter = nodemailer.createTransport({
 
 // Rota para processar o formulário e enviar o e-mail
 app.post('/send-email', (req, res) => {
-    const { name, email, issue } = req.body;
+    const { name, email, issue, urgency, filial } = req.body;
 
     // Incrementar o número do ticket
     ticketNumber++;
@@ -50,7 +50,13 @@ app.post('/send-email', (req, res) => {
         from: process.env.GMAIL_USER,
         to: 'suporte.ti@autopremier.com.br',
         subject: `Novo ticket de suporte de ${name}`,  // Assunto do e-mail
-        text: `Ticket Número: #${ticketNumber}\nNome: ${name}\nE-mail: ${email}\nDescrição do Problema: ${issue}`
+        text: `Ticket Número: #${ticketNumber}
+            Nome: ${name}
+            E-mail: ${email}
+            Filial: ${filial}
+            Urgência: ${urgency}
+            Descrição do Problema: ${issue}`
+
     };
 
     // Enviar o e-mail
