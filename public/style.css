@@ -119,8 +119,17 @@ select option {
     margin-top: 10px;
 }
 
-/* Tornar a terceira caixa (Descrição do Problema) não editável */
 textarea#issue {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
     pointer-events: auto;
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    height: 120px; /* Aqui define a altura maior */
+    resize: vertical; /* Permite redimensionar para baixo, se quiser */
 }
+
