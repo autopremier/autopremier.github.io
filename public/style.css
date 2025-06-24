@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Essa linha evita barra lateral horizontal */
+    overflow-x: hidden; /* corta qualquer excesso horizontal */
     background-image: url('images/134_Vehicles_Wallpapers_3840x2160px.jpg');
     background-size: cover;
     background-position: center;
@@ -10,18 +10,21 @@ body {
     background-attachment: fixed;
 }
 
+
 .container {
-    max-width: 500px;
-    width: 90%; /* Garante que nunca ultrapasse a tela */
-    margin: 5vh auto; /* Reduz a margem vertical */
+    max-width: 480px;
+    width: 90%;
+    margin: 4vh auto;
     background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
-    overflow: hidden; /* Evita vazamentos de conteúdo interno */
+    overflow: hidden;
+    box-sizing: border-box;
 }
+
 
 h1 {
     text-align: center;
